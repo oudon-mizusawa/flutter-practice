@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_practice/lesson01.dart';
 import 'package:flutter_practice/lesson02.dart';
 import 'package:flutter_practice/lesson03.dart';
+import 'package:flutter_practice/lesson04.dart';
 
 void main() {
   runApp(const MainApp());
@@ -59,6 +60,18 @@ class MyApp extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => Lesson03()),
+                    );
+                  },
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                  child: Text('課題4'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Lesson04()),
                     );
                   },
                 )
