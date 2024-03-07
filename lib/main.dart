@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/lesson01.dart';
 
 void main() {
   runApp(const MainApp());
@@ -19,35 +20,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('課題1'),
-      ),
-      body: SizedBox(
-          height: 200,
-          child: Row(children: [
-            Expanded(
-              flex: 2,
-              child: Container(
-                color: Colors.red,
-                child: const Center(
-                  child: Text('MAIN'),
-                ),
-              ),
+        appBar: AppBar(
+          title: const Text('課題1'),
+        ),
+        body: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              children: [
+                ElevatedButton(
+                  child: Text('課題1'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Lesson01()),
+                    );
+                  },
+                )
+              ],
             ),
-            Expanded(
-                flex: 1,
-                child: Column(
-                  children: [
-                    Container(
-                      height: 50,
-                      color: Colors.green,
-                      child: const Center(
-                        child: Text('A'),
-                      ),
-                    )
-                  ],
-                )),
-          ])),
-    );
+          ),
+        ));
   }
 }
