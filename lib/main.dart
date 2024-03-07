@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice/lesson01.dart';
+import 'package:flutter_practice/lesson02.dart';
+import 'package:flutter_practice/lesson03.dart';
 
 void main() {
   runApp(const MainApp());
@@ -33,6 +35,30 @@ class MyApp extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => Lesson01()),
+                    );
+                  },
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                  child: Text('課題2'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Lesson02()),
+                    );
+                  },
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                  child: Text('課題3'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Lesson03()),
                     );
                   },
                 )

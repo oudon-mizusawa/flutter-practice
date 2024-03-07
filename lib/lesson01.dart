@@ -1,17 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Lesson01 extends StatelessWidget {
-  const Lesson01({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MyApp(),
-    );
-  }
-}
-
-class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
