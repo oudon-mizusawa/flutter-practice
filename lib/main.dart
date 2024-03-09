@@ -3,6 +3,8 @@ import 'package:flutter_practice/lesson01.dart';
 import 'package:flutter_practice/lesson02.dart';
 import 'package:flutter_practice/lesson03.dart';
 import 'package:flutter_practice/lesson04.dart';
+import 'package:flutter_practice/lesson05.dart';
+import 'package:flutter_practice/lesson06.dart';
 
 void main() {
   runApp(const MainApp());
@@ -24,14 +26,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('課題1'),
+          title: const Text('課題一覧'),
         ),
         body: SingleChildScrollView(
           child: Center(
             child: Column(
               children: [
                 ElevatedButton(
-                  child: Text('課題1'),
+                  child: const Text('課題1'),
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -43,11 +45,11 @@ class MyApp extends StatelessWidget {
                   height: 20,
                 ),
                 ElevatedButton(
-                  child: Text('課題2'),
+                  child: const Text('課題2'),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Lesson02()),
+                      MaterialPageRoute(builder: (context) => const Lesson02()),
                     );
                   },
                 ),
@@ -55,11 +57,11 @@ class MyApp extends StatelessWidget {
                   height: 20,
                 ),
                 ElevatedButton(
-                  child: Text('課題3'),
+                  child: const Text('課題3'),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Lesson03()),
+                      MaterialPageRoute(builder: (context) => const Lesson03()),
                     );
                   },
                 ),
@@ -67,11 +69,35 @@ class MyApp extends StatelessWidget {
                   height: 20,
                 ),
                 ElevatedButton(
-                  child: Text('課題4'),
+                  child: const Text('課題4'),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Lesson04()),
+                      MaterialPageRoute(builder: (context) => const Lesson04()),
+                    );
+                  },
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                  child: const Text('課題5'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Lesson05()),
+                    );
+                  },
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                  child: const Text('課題6'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Lesson06()),
                     );
                   },
                 )
