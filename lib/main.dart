@@ -11,6 +11,7 @@ import 'package:flutter_practice/presentation/lesson07.dart';
 import 'package:flutter_practice/presentation/lesson08.dart';
 import 'package:flutter_practice/presentation/lesson09.dart';
 import 'package:flutter_practice/presentation/lesson10.dart';
+import 'package:flutter_practice/presentation/lesson11.dart';
 
 void main() {
   runApp(const MainApp());
@@ -38,6 +39,28 @@ class MyApp extends StatelessWidget {
           child: Center(
             child: Column(
               children: [
+                const SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                  child: const Text('web_view'),
+                  onPressed: () {
+                    if (kIsWeb) {
+                      // Nothing to do.
+                    } else {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const WebViewPage(
+                                title: 'webview',
+                                url: 'https://www.google.com/')),
+                      );
+                    }
+                  },
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
                 ElevatedButton(
                   child: const Text('課題1'),
                   onPressed: () {
@@ -111,25 +134,6 @@ class MyApp extends StatelessWidget {
                   height: 20,
                 ),
                 ElevatedButton(
-                  child: const Text('web_view'),
-                  onPressed: () {
-                    if (kIsWeb) {
-                      // Nothing to do.
-                    } else {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const WebViewPage(
-                                title: 'webview',
-                                url: 'https://www.google.com/')),
-                      );
-                    }
-                  },
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                ElevatedButton(
                   child: const Text('課題7'),
                   onPressed: () {
                     Navigator.push(
@@ -171,6 +175,18 @@ class MyApp extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const Lesson10()),
+                    );
+                  },
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                  child: const Text('課題11'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Lesson11()),
                     );
                   },
                 ),
