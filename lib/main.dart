@@ -1,10 +1,12 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/lesson01.dart';
-import 'package:flutter_practice/lesson02.dart';
-import 'package:flutter_practice/lesson03.dart';
-import 'package:flutter_practice/lesson04.dart';
-import 'package:flutter_practice/lesson05.dart';
-import 'package:flutter_practice/lesson06.dart';
+import 'package:flutter_practice/presentation/common/web_view_page.dart';
+import 'package:flutter_practice/presentation/lesson01.dart';
+import 'package:flutter_practice/presentation/lesson02.dart';
+import 'package:flutter_practice/presentation/lesson03.dart';
+import 'package:flutter_practice/presentation/lesson04.dart';
+import 'package:flutter_practice/presentation/lesson05.dart';
+import 'package:flutter_practice/presentation/lesson06.dart';
 
 void main() {
   runApp(const MainApp());
@@ -100,7 +102,26 @@ class MyApp extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => const Lesson06()),
                     );
                   },
-                )
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                  child: const Text('web_view'),
+                  onPressed: () {
+                    if (kIsWeb) {
+                      // Nothing to do.
+                    } else {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const WebViewPage(
+                                title: 'webview',
+                                url: 'https://www.google.com/')),
+                      );
+                    }
+                  },
+                ),
               ],
             ),
           ),
