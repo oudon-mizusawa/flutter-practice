@@ -7,6 +7,7 @@ import 'package:flutter_practice/presentation/lesson03.dart';
 import 'package:flutter_practice/presentation/lesson04.dart';
 import 'package:flutter_practice/presentation/lesson05.dart';
 import 'package:flutter_practice/presentation/lesson06.dart';
+import 'package:flutter_practice/presentation/lesson07.dart';
 
 void main() {
   runApp(const MainApp());
@@ -120,6 +121,18 @@ class MyApp extends StatelessWidget {
                                 url: 'https://www.google.com/')),
                       );
                     }
+                  },
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                  child: const Text('課題7'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Lesson07()),
+                    );
                   },
                 ),
               ],
